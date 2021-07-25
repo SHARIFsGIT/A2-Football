@@ -22,13 +22,13 @@ body{
     background-color: #e02c68;
     border-radius: 5px;
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
     transition: transform 2s, translate 2s ;
 }
 .top-heading a:hover{
     transform: scale(1.1);
-    background-image: linear-gradient(#e02c68, red);
+    background-image: linear-gradient(#e02c68, rgba(255, 99, 71, 0.521));
 }
 .top-image img{
     width: 550px;
@@ -47,8 +47,8 @@ body{
 .player{  
     padding: 15px 15px 30px 15px;
     margin:10px 20px;
-    box-shadow: 0px 0px 10px gray;
-    border-radius: 5px;
+    box-shadow: 0px 0px 10px lightskyblue;
+    border-radius: 10px;
 }
 .player img{
     height: 250px;
@@ -57,28 +57,30 @@ body{
 }
 /* Match schedule */
 .match-schedule{
-    margin: 100px 100px;
+    margin: 50px 100px 400px;
     width: 70%;
 }
 .vote{
     width: 30%;
 }
-.calander{
+.calender{
     display: grid;
-    grid-template-columns: repeat(6,1fr);
-    grid-gap: 1em;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 2em;
     height: 150px;
 }
 .date{
-    background-color: lightgray;
+    background-color: rgba(135, 206, 250, 0.267);
     font-size: 1.2em;
     text-align: center;
+    align-items: center;
+    padding-top: 10px;
     justify-content: center;
     border-radius: 10px;
 }
 /* Form */
 form{
-    margin: 50px 100px;
+    margin: 50px 150px 0px 0px;
 }
 fieldset, form>p,{
     font-size: 18px;
@@ -104,7 +106,7 @@ footer img{
     height: 110px;
 }
 .footer-icon>a>i{
-    background-color: gainsboro;
+    background-color: rgba(220, 220, 220, 0.192);
     color: black;
     font-size: 25px;
     padding:20px;
@@ -113,10 +115,12 @@ footer img{
 footer p{
     font-size: 20px;
 }
-
- /* Media quary */
+span{
+    color: rgb(0, 157, 255);
+}
+ /* Media quarry */
 @media only screen and (max-width:668px) {
-/* Top section media-quary  */
+/* Top section media-quarry  */
 .top-section{       
     width: 100%;
     display:flex;
@@ -124,21 +128,21 @@ footer p{
     align-items: center;       
 }
 .top-heading{
-    padding: 0px 50px ;
+    padding: 0px 0px ;
 }
 .top-image img{
     padding: 50px 0px ;
     width :330px;
     height:260px;    
 }
-/* Player Media-quary */
+/* Player Media-quarry */
 .players{
     display: grid;
     grid-template-columns: repeat(1,1fr);
     justify-content: center;
     align-items: center;
 }
-/* Match schedule & vote media-quary */
+/* Match schedule & vote media-quarry */
 .flex{
     display: flex;
     width: 100%;
@@ -146,7 +150,7 @@ footer p{
     justify-content: center;
     align-items: center;
 }
-.calander{
+.calender{
     display: grid;
     width: 100%;
     grid-template-columns: repeat(2, 1fr);
@@ -154,19 +158,26 @@ footer p{
     align-items: center;
 }
 .vote{
-    padding-top: 350px;
-    float: left;
+    padding-top: 250px;
+}
+.vote>h2{
+    width: 300px;
 }
 .radio{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    height: 300px;
+    width: 260px;
 }
-/* Footer media-quary  */
+/* Footer media-quarry  */
 footer{
     width: 100%;
-    display: flex;  
+    display: flex;
 }
 footer img{
-    width: 300px;
-    height: 90px;
+    margin-top: 50px;
+    margin-bottom: 15px;
+    width: 250px;
+    height: 80px;
+}
 }
